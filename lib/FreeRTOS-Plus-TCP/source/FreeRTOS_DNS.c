@@ -1346,11 +1346,6 @@ TickType_t xTimeoutTime = pdMS_TO_TICKS( 200 );
 		/* For each entry in the DNS cache table. */
 		for( x = 0; x < ipconfigDNS_CACHE_ENTRIES; x++ )
 		{
-			if( xDNSCache[ x ].pcName[ 0 ] == 0 )
-			{
-				break;
-			}
-
 			if( 0 == strcmp( xDNSCache[ x ].pcName, pcName ) )
 			{
 				/* Is this function called for a lookup or to add/update an IP address? */
